@@ -1,9 +1,11 @@
 package com.dev.ta_iin_2020.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class AdapterPerMonth extends RecyclerView.Adapter<AdapterPerMonth.viewHolder> {
+
 
     private Context context;
     private List<PerMonth.DataBean> dataBeans;
@@ -36,8 +39,17 @@ public class AdapterPerMonth extends RecyclerView.Adapter<AdapterPerMonth.viewHo
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        holder.dateRowPerMonth.setText(dataBeans.get(position).getBulan()+"-"+dataBeans.get(position).getTahun());
-        holder.TotalRowPerMonth.setText(dataBeans.get(position).getTotal());
+        if (position < 9) {
+            holder.nomonth.setText("0" + (position + 1) + "");
+        } else {
+            holder.nomonth.setText((position + 1) + "");
+        }
+
+        if (position % 2 != 0) {
+            holder.linear2.setBackgroundColor(Color.parseColor("#cccccc"));
+        }
+        holder.dateRowPerMonth.setText(dataBeans.get(position).getBulan() + "-" + dataBeans.get(position).getTahun());
+        holder.TotalRowPerMonth.setText("Rp. " + dataBeans.get(position).getTotal());
     }
 
     @Override
@@ -50,6 +62,11 @@ public class AdapterPerMonth extends RecyclerView.Adapter<AdapterPerMonth.viewHo
         TextView dateRowPerMonth;
         @BindView(R.id.TotalRowPerMonth)
         TextView TotalRowPerMonth;
+        @BindView(R.id.nomonth)
+        TextView nomonth;
+        @BindView(R.id.linear2)
+        LinearLayout linear2;
+
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);

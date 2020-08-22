@@ -14,4 +14,12 @@ public interface ApiInterface {
 
     @GET("getPerMonth.php")
     Call<ResponseBody> getPerMonth();
+
+    @GET("getDataPerDay.php")
+    Call<ResponseBody> getDetailDay();
+
+    @GET("getDataPerMonth.php")
+    Call<ResponseBody> getDetailMonth();
+
+
 }

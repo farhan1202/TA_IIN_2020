@@ -146,6 +146,38 @@
                             android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
                     </LinearLayout>
                 </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/background_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@android:color/white"
+                        android:text="No"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:text="Date"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:text="Total"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerDataDay"
                     android:layout_width="match_parent"
@@ -174,6 +206,38 @@
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
                     </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@drawable/background_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@android:color/white"
+                        android:text="No"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:text="Date"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:padding="5dp"
+                        android:textColor="@android:color/white"
+                        android:text="Total"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerDataMonth"

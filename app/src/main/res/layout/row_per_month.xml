@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_marginHorizontal="50dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <RelativeLayout
+
+    <LinearLayout
+        android:id="@+id/linear2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
-            android:textSize="18dp"
-            android:text="1-1"
-            android:textStyle="bold|italic"
+            android:id="@+id/nomonth"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="1" />
+
+        <TextView
+            android:padding="5dp"
             android:id="@+id/dateRowPerMonth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1-1"
+            android:textStyle="bold|italic" />
+
         <TextView
-            android:textSize="18dp"
-            android:layout_centerVertical="true"
-            android:text="50000"
-            android:layout_alignParentEnd="true"
+            android:padding="5dp"
             android:id="@+id/TotalRowPerMonth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </RelativeLayout>
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:text="50000"
+            />
+    </LinearLayout>
+
 </RelativeLayout>

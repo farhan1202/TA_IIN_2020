@@ -1,7 +1,9 @@
 package com.dev.ta_iin_2020;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -90,6 +92,22 @@ public class MainActivity extends AppCompatActivity {
                             banyak2.setText(jsonArray.getJSONObject(0).getString("banyak"));
                             banyak5.setText(jsonArray.getJSONObject(1).getString("banyak"));
                             banyak10.setText(jsonArray.getJSONObject(2).getString("banyak"));
+
+                            btndetailDay.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(getApplicationContext(), DetailDataDayActivity.class);
+                                    startActivity(intent);
+                                }
+                            });
+
+                            btndetailMonth.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    Intent intent = new Intent(getApplicationContext(), DetailDataMonthActivity.class);
+                                    startActivity(intent);
+                                }
+                            });
 
                             getdataPerDay();
                             getdataPerMonth();
